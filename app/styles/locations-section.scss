@@ -1,0 +1,274 @@
+// app/styles/components/_location.scss
+
+$primary: #000000;
+$accent: #ED1C24;
+$secondary: #003399;
+$light: #FFFFFF; 
+
+.location-section {
+    position: relative;
+    padding: 8rem 2rem;
+    background: $light;
+  
+    .section-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba($secondary, 0.03) 0%, rgba($primary, 0.03) 100%);
+      z-index: 1;
+    }
+  
+    .location-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+  
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  
+  .map-container {
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba($primary, 0.1);
+    
+    .map-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+     
+    }
+  }
+  .locations-list {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  
+    &::-webkit-scrollbar {
+      height: 8px;
+      background: rgba($primary, 0.05);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: rgba($accent, 0.3);
+      border-radius: 4px;
+    }
+  
+    @media (max-width: 768px) {
+      gap: 1.5rem;
+      scroll-snap-type: x proximity;
+    }
+  }
+  .icon-base {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    fill: currentColor;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .location-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: $light;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba($primary, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid $accent;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba($primary, 0.1);
+    }
+  
+    .card-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba($primary, 0.1);
+    }
+  
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .marker-icon {
+        @extend .icon-base;
+        width: 1.8em;
+        height: 1.8em;
+        color: $accent;
+      }
+    
+  }
+  
+  // Enhanced responsive design
+  @media (max-width: 1024px) {
+    .location-card {
+      flex: 0 0 280px;
+      min-height: 320px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .location-card {
+      flex: 0 0 85vw;
+      min-height: 300px;
+    }
+  }
+   
+     // Add new styles
+.info-item {
+
+    .info-icon {
+        @extend .icon-base;
+        color: $secondary;
+        
+        // Phone specific
+        &[data-icon="phone"] {
+          transform: rotate(10deg); // subtle orientation adjustment
+        }
+      }
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba($primary, 0.1);
+  }
+  
+  .facebook-link {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background: rgba($secondary, 0.1);
+      
+      .facebook-icon {
+        transform: scale(1.1);
+        color: $accent;
+      }
+    }
+  }
+  
+  .facebook-icon {
+    @extend .icon-base;
+    width: 1.5em;
+    height: 1.5em;
+    color: $secondary;
+
+    &:hover {
+      color: darken($secondary, 15%);
+    }
+  }
+
+  .tmc-logo {
+    @extend .icon-base;
+    width: 1.8em;
+    height: 1.8em;
+  }
+  
+  .cta-directions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $accent;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  
+    .arrow-icon {
+        @extend .icon-base;
+        width: 1em;
+        height: 1em;
+        margin-left: 0.5em;
+      }
+    
+  
+    &:hover {
+      color: darken($accent, 10%);
+      
+      .arrow-icon {
+        transform: translateX(3px);
+      }
+    }
+    
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    .location-section {
+      padding: 5rem 1.5rem;
+      
+      .location-grid {
+        gap: 3rem;
+      }
+    }
+  
+    .map-container {
+      height: 400px;
+    }
+  
+    .location-card {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .location-card {
+      .marker-icon {
+        width: 1.5em;
+        height: 1.5em;
+      }
+  
+      .info-icon {
+        width: 1em;
+        height: 1em;
+      }
+  
+      .facebook-icon {
+        width: 1.2em;
+        height: 1.2em;
+      }
+      .tmc-logo {
+        width: 1.2em;
+        height: 1.2em;
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+@use 'index.scss';
+@use 'navbar.scss';
+@use 'hero-section.scss';
+@use 'information-section.scss';
+@use 'locations-section.scss';
+@use 'footer';
+
+body {
+
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+head{
+
+  .page-icon{
+
+    vertical-align: middle;
+  }
+}

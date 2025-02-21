@@ -1,0 +1,74 @@
+{{!-- app/templates/components/information-section.hbs --}}
+<section class="information-section" id="information">
+  <div class="section-overlay"></div>
+  
+  <div class="information-container">
+    {{!-- Mission Statement --}}
+    <div class="mission-statement">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-accent">Our Sacred Mission</span>
+          <span class="title-main">The Traditional Methodist Church</span>
+        </h2>
+        <div class="title-divider"></div>
+      </div>
+      <p class="mission-text">
+Our mission is to spread scriptural holiness and make disciples of Jesus Christ,
+empowered by the Holy Spirit to transform lives, renew communities, and reform the world for
+God's glory.
+      </p>
+      {{svg-jar "tmc-logo" class="crest-icon animate-pulse"}}
+      {{!-- Corrected SVG implementation --}}
+{{!-- <svg-jar
+  class="crest-icon animate-pulse" 
+  data-test-crest-icon 
+  
+--}}
+    </div>
+
+    {{!-- Service Times --}}
+{{!-- Updated worship banner template --}}
+<div class="worship-banner">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <h2 class="banner-text">
+      <span class="line-1">Praise,</span>
+      <span class="line-2">Pray</span>
+      <span class="line-3">& Worship</span>
+    </h2>
+    <button 
+      type="button" 
+      class="cta-join"
+      {{on "click" this.scrollToLocations}}
+    >
+      Join Us
+      {{svg-jar "arrow-down" class="cta-icon"}}
+    </button>
+       {{svg-jar "tmc-logo" class="crest-icon animate-pulse"}}
+  </div>
+
+</div>
+    {{!-- Preaching Points --}}
+    <div class="preaching-points">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-accent">Our Core Teachings</span>
+          <span class="title-main">Our congregation is committed to</span>
+        </h2>
+        <div class="title-divider"></div>
+      </div>
+      
+      <div class="points-grid">
+        {{#each this.preachingPoints as |point index|}}
+          <div class="point-item" data-aos="fade-up" data-aos-delay="{{multiply index 100}}">
+            <div class="point-marker">0{{add index 1}}</div>
+            <div class="point-content">
+              <h3 class="point-title">{{point.title}}</h3>
+              <p class="point-description">{{point.description}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
