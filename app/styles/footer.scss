@@ -112,92 +112,95 @@ $light: #FFFFFF;
 }
 
 .newsletter-form {
-
-
+  max-width: 500px;
+  margin: 0 auto;
 
   .form-group {
     position: relative;
-    max-width: 400px;
     display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
     gap: 1rem;
-  }
-  .subscription-status {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
     
-    &.success {
-      background: rgba(76, 175, 80, 0.1);
-      color: #4CAF50;
-      border: 1px solid #4CAF50;
-    }
-    
-    &.error {
-      background: rgba(244, 67, 54, 0.1);
-      color: #F44336;
-      border: 1px solid #F44336;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 0.8rem;
     }
   }
 
-  .cta-subscribe[disabled] {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
   .newsletter-input {
-    
-    min-height: 50px;
-    max-width: 150px;
-    padding: 0 1rem;
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid rgba($light, 0.3);
+    border-radius: 50px;
+    background: transparent;
     color: $light;
-    font-size: 15px;
     font-family: 'Raleway', sans-serif;
-    border: 1px solid $secondary;
-    background-color: transparent;
-  
+    transition: all 0.3s ease;
+
     &:focus {
       outline: none;
-      border-color: $light;
+      border-color: $secondary;
+      box-shadow: 0 0 0 3px rgba($secondary, 0.2);
     }
 
+    &::placeholder {
+      color: rgba($light, 0.7);
+    }
   }
 
   .cta-subscribe {
-    min-height: 50px;
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: $secondary;
+    background: $accent;
     color: $light;
-    font-size: 15px;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color .3s ease-in-out;
-
-
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    
     &:hover {
       background: darken($accent, 10%);
+      transform: translateY(-1px);
     }
-    .icon-base {
-      width: 1.2em;
-      height: 1.2em;
-      vertical-align: middle;
-      fill: currentColor;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:disabled {
+      background: desaturate($accent, 40%);
+      cursor: not-allowed;
+      transform: none;
     }
-    .cta-icon{
+
+    .cta-icon {
       @extend .icon-base;
+      width: 1rem;
+      height: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .spinner-icon {
       width: 1.2rem;
       height: 1.2rem;
-      transition: transform 0.3s ease;  
+      animation: spin 1s linear infinite;
     }
   }
 
-  .disclaimer {
-    font-size: 0.8rem;
-    color: rgba($light, 0.7);
-    margin-top: 0.5rem;
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    
+    .newsletter-input {
+      padding: 0.7rem 1.2rem;
+    }
+    
+    .cta-subscribe {
+      padding: 0.7rem 1.5rem;
+    }
   }
 }
 
@@ -212,16 +215,16 @@ $light: #FFFFFF;
   gap: 1rem;
 }
 .icon-base {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
   vertical-align: middle;
   fill: currentColor;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tmc-logo {
   @extend .icon-base;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
 }
 .copyright {
   font-family: 'Raleway', sans-serif;
