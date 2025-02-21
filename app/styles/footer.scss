@@ -112,9 +112,17 @@ $light: #FFFFFF;
 }
 
 .newsletter-form {
+
+
+
   .form-group {
     position: relative;
     max-width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
   }
   .subscription-status {
     margin-top: 1rem;
@@ -140,34 +148,33 @@ $light: #FFFFFF;
     cursor: not-allowed;
   }
   .newsletter-input {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border: 1px solid rgba($light, 0.2);
-    border-radius: 4px;
-    background: transparent;
+    
+    min-height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
     color: $light;
+    font-size: 15px;
     font-family: 'Raleway', sans-serif;
-
+    border: 1px solid $secondary;
+    background-color: transparent;
+  
     &:focus {
       outline: none;
-      border-color: $secondary;
+      border-color: $light;
     }
+
   }
 
   .cta-subscribe {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    background: $accent;
-    color: $light;
+    min-height: 50px;
+    padding: 0.5rem 1rem;
     border: none;
-    padding: 0 1.5rem;
+    background-color: $secondary;
+    color: $light;
+    font-size: 15px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background 0.3s ease;
+    transition: background-color .3s ease-in-out;
+
 
     &:hover {
       background: darken($accent, 10%);
@@ -242,6 +249,7 @@ $light: #FFFFFF;
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
+    padding: 1.5rem;
   }
 
   .footer-bottom {

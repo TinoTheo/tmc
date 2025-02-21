@@ -11,6 +11,11 @@ $light: #FFFFFF;
   .nav-links a {
     color: $primary;
     transition: color 1s ease;
+
+    @media (max-width: 768px) {
+      color: $light;
+      
+    }
 }
 
 .logo{
@@ -30,8 +35,17 @@ $light: #FFFFFF;
   }
   }
 }
+.hamburger {
+
+  .bar{
+    background: $primary;
+  }
+
 }
-  
+}
+
+
+
 }
 
 .nav-container {
@@ -146,8 +160,6 @@ $light: #FFFFFF;
         right: 0;
         background: linear-gradient(135deg, rgba($primary, 0.98) 0%, rgba($secondary, 0.15) 100%);
         backdrop-filter: blur(20px);
-        border: 1px solid rgba($light, 0.1);
-        border-radius: 0 0 12px 12px;
         flex-direction: column;
         padding: 1.5rem;
         text-align: center;
@@ -229,7 +241,7 @@ $light: #FFFFFF;
         display: block;
         width: 25px;
         height: 2px;
-        background: $light;
+        background: $secondary;
         margin: 5px 0;
         transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       }
