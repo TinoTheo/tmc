@@ -216,7 +216,7 @@ $light: #FFFFFF;
       display: grid;
       grid-template-columns: 60px 1fr;
       gap: 2rem;
-      padding: 2rem;
+      padding: 0;
       position: relative;
       transition: all 0.3s ease;
   
@@ -254,7 +254,7 @@ $light: #FFFFFF;
   
         .point-description {
           font-size: 1rem;
-          line-height: 1.7;
+          line-height: 1;
           color: rgba($primary, 0.8);
         }
       }

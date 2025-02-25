@@ -11,8 +11,8 @@ $light: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba($primary, 0), rgba($primary, 0)),
-              url('/assets/images/cross.jpg') center/cover;
+  background: linear-gradient(#000000,rgba($light, 0.1)), url('/assets/images/hero-bg (2).jpg') center/cover;
+              
   color: $light;
   padding: 2rem;
   overflow: hidden;

@@ -1,5 +1,5 @@
 <nav class="nav-container {{if this.isScrolled 'scrolled'}}">
-  <div class="nav-content">
+<div class="nav-content">
     <a href="#hero" class="logo">
       <img 
         src="/assets/images/logo.png" 
@@ -11,16 +11,40 @@
         <div class="logo-text-full">The Traditional Methodist Church</div>
       </div>
     </a>
-    
+
     <div class="nav-links {{if this.isMenuOpen 'active'}}">
       <a href="#hero" {{on "click" this.closeMenu}}>Home</a>
       <a href="#information" {{on "click" this.closeMenu}}>About</a>
-      <a href="#locations" {{on "click" this.closeMenu}}>Locations</a>
+      <div class="nav-dropdown"  {{on "mouseleave" (fn (mut this.isLocationsOpen) false)}} >
+        <button 
+          class="dropdown-toggle {{if this.isLocationsOpen 'active'}}" 
+          type="button"
+          {{on "click" (fn this.toggleDropdown 'locations')}}
+          aria-haspopup="true" 
+          aria-expanded="{{this.isLocationsOpen}}"
+        >
+          Locations
+          {{svg-jar "chevron-down" class="dropdown-icon"}}
+        </button>
+        
+        <div class="dropdown-list {{if this.isLocationsOpen 'active'}}">
+          {{#each this.locationItems as |location|}}
+            <a 
+              href="#location-section" 
+              class="dropdown-link"
+              {{on "click" (fn this.navigateToLocation location.id)}}
+            >
+              {{location.name}}
+            </a>
+          {{/each}}
+        </div>
+      </div>
       <a href="#testimonials" {{on "click" this.closeMenu}}>Community</a>
       <a href="#contact" {{on "click" this.closeMenu}}>Contact</a>
     </div>
 
-    <button 
+
+<button 
       class="hamburger {{if this.isMenuOpen 'active'}}" 
       type="button"
       {{on "click" this.toggleMenu}}
@@ -29,5 +53,6 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
+
   </div>
 </nav>

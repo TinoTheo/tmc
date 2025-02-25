@@ -6,7 +6,37 @@ import { tracked } from '@glimmer/tracking';
 export default class NavBarComponent extends Component {
   @tracked isMenuOpen = false;
   @tracked isScrolled = false; // NEW tracked property for scroll state
+  @tracked isLocationsOpen = false;
 
+  locationItems = [
+    { id: 'tshwane', name: 'Tshwane TMC' },
+    { id: 'north-rand', name: 'North Rand TMC' },
+    { id: 'platinum', name: 'Platinum TMC' },
+    { id: 'free-state', name: 'Free State TMC' },
+    { id: 'limpopo', name: 'Limpopo TMC' },
+    { id: 'south-rand', name: 'South Rand TMC' },
+    { id: 'east-rand', name: 'East Rand TMC' },
+    { id: 'vaal-triangle', name: 'Vaal Triangle TMC' }
+  ];
+
+  @action
+  toggleDropdown(dropdownType) {
+    if (dropdownType === 'locations') {
+      this.isLocationsOpen = !this.isLocationsOpen;
+    }
+  }
+
+  @action
+  navigateToLocation(locationId, event) {
+    event.preventDefault();
+    this.isMobileMenuOpen = false;
+    this.isLocationsOpen = false;
+    document.getElementById('locations')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    // Add logic to highlight specific location if needed
+  }
   constructor() {
     super(...arguments);
     this.handleClickOutside = this.handleClickOutside.bind(this);
