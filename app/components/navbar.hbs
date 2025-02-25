@@ -33,6 +33,7 @@
               href="#location-section" 
               class="dropdown-link"
               {{on "click" (fn this.navigateToLocation location.id)}}
+              {{on "click" this.closeMenu}}
             >
               {{location.name}}
             </a>
