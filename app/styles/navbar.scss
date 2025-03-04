@@ -89,8 +89,7 @@ $light: #FFFFFF;
           
   
           @media (max-width: 768px) {
-            width: 45px;
-            height: 45px;
+            width: fit-content;
           }
         }
   
