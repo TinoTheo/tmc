@@ -12,7 +12,8 @@ export default class LocationSectionComponent extends Component {
       address: "376 Steve Biko Road, Acardia Centre, Acardia",
       serviceTimes: "Sun: 9:30 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/DXDbqZ5GcQ3NX6bF7",
-      phone: "+27 2071 4567 | +27 78 775 5814",
+      phone_a: "+27 78 277 1027",
+      phone_b: "+27 78 775 5814",
       facebookUrl: "https://www.facebook.com/share/18FmjXtkwv/"
     },
     {
@@ -20,7 +21,8 @@ export default class LocationSectionComponent extends Component {
       address: "46 2nd Street Maraisburg, Johhannesburg",
       serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/sV2Ndg6zdY47ij9i6",
-      phone: "+27 72 221 2524 | +27 76 593 6458",
+      phone_a: "+27 72 221 2524",
+      phone_b: "+27 76 593 6458",
       facebookUrl: "https://maps.app.goo.gl/uFVmhSRL9vH8V2sK8"
     },
     {
@@ -28,7 +30,8 @@ export default class LocationSectionComponent extends Component {
       address: "34a Church Hill Ave, Golfview, Mafikeng",
       serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/PGwcSAqnttzAy7Pq7",
-      phone: "+27 83 748 3419 | 27 78 924 5772",
+      phone_a: "+27 83 748 3419",
+      phone_b: "+27 78 924 5772",
       facebookUrl: "https://www.facebook.com/share/156W7zPP4m/?mibextid=wwXIfr"
     },
     {
@@ -36,7 +39,8 @@ export default class LocationSectionComponent extends Component {
       address: "180 Klopper Street, Rusternburg",
       serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/TdKRoj4B7wAnQTDi9",
-      phone: "+27 83 619 3336 | +27 78 653 5078",
+      phone_a: "+27 83 619 3336",
+      phone_b: "+27 78 653 5078",
       facebookUrl: "https://www.facebook.com/share/156W7zPP4m/?mibextid=wwXIfr"
     },
     {
@@ -45,7 +49,8 @@ export default class LocationSectionComponent extends Component {
       address: "58 Portia Street Bedelia, Welkom 9459",
       serviceTimes: "Sun: 9:30 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/fSSJnr5jShfBUeFDA",
-      phone: "+27 63 759 6627 | +27 74 775 8118",
+      phone_a: "+27 63 759 6627",
+      phone_b: "+27 74 775 8118",
       facebookUrl: "https://facebook.com/tmc"
     },
     {
@@ -53,7 +58,8 @@ export default class LocationSectionComponent extends Component {
       address: "92 Schoeman street, Polokwane, Rostec College Building ",
       serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/1QtSA2PkMwzrUf1v7",
-      phone: "+27 2076 543 210",
+      phone_a: "+27 2076 543 210",
+      phone_b: "+27 78 924 5772",
       facebookUrl: "https://www.facebook.com/share/1AFMK7J4iu/"
     },
       {
@@ -61,7 +67,7 @@ export default class LocationSectionComponent extends Component {
         address: "123 Limpopo Road, Limpopo",
         serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
         directions: "https://goo.gl/maps/example2",
-        phone: "+27 2076 543 210",
+        phone_a: "+27 2076 543 210",
         facebookUrl: "#"
       },  
       {
@@ -69,7 +75,8 @@ export default class LocationSectionComponent extends Component {
         address: "10 Top Road, Anderbolt, Boksburg",
         serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
         directions: "https://maps.app.goo.gl/1XYgQZFfHeqnYjHj9",
-        phone: "+27 7654 3210",
+        phone_a: "+27 78 277 1027",
+        phone_b: "+27 2071 4567",
         facebookUrl: "https://facebook.com/tmc-eastchapel"
       },
 
@@ -79,7 +86,8 @@ export default class LocationSectionComponent extends Component {
         address: "Academy at Vaal Triangle 20 Voortrekker Street, CBD, Vereeniging, 1939",
         serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
         directions: "https://maps.app.goo.gl/HGb8thbvSkvuFEMT8",
-        phone: "+27 76 948 5618 | +27 76 593 6458",
+        phone_a: "+27 76 948 5618",
+        phone_b: "+27 76 593 6458",
         facebookUrl: "https://www.facebook.com/share/18k7UitSsL/"
       },
 
