@@ -139,8 +139,13 @@ $light: #FFFFFF;
   }
    
      // Add new styles
-.info-item {
+.info-item {  
 
+  .info-text{
+
+    color: $primary;
+   font-weight: bold;
+  }
     .info-icon {
         @extend .icon-base;
         color: $secondary;
@@ -160,7 +165,7 @@ $light: #FFFFFF;
         color: $accent;
       }
     }
-    
+
   }
   
   .card-footer {

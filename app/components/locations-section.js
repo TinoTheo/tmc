@@ -10,23 +10,23 @@ export default class LocationSectionComponent extends Component {
       id: "tshwane",
       name: "TMC Tshwane",
       address: "376 Steve Biko Road, Acardia Centre, Acardia",
-      serviceTimes: "Sun: 9:30 AM & 12:00 AM | Mid Week: 18:30",
-      directions: "https://maps.app.goo.gl/tdn6t8rAY5FQc2Rr9",
-      phone: "+27 2071 4567",
+      serviceTimes: "Sun: 9:30 AM | Mid Week: 6:30 PM",
+      directions: "https://maps.app.goo.gl/DXDbqZ5GcQ3NX6bF7",
+      phone: "+27 2071 4567 | +27 78 775 5814",
       facebookUrl: "https://www.facebook.com/share/18FmjXtkwv/"
     },
     {
       name: "TMC Northrand",
       address: "46 2nd Street Maraisburg, Johhannesburg",
-      serviceTimes: "Sun: 9:00 AM | Mid Week: 18:30 PM",
-      directions: "https://maps.app.goo.gl/4duqXhkZWvuHdgmT6",
+      serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
+      directions: "https://maps.app.goo.gl/sV2Ndg6zdY47ij9i6",
       phone: "+27 72 221 2524 | +27 76 593 6458",
-      facebookUrl: "https://www.facebook.com/share/1AfYcC52xF/"
+      facebookUrl: "https://maps.app.goo.gl/uFVmhSRL9vH8V2sK8"
     },
     {
       name: "TMC Mafikeng",
       address: "34a Church Hill Ave, Golfview, Mafikeng",
-      serviceTimes: "Sun: 9:00 AM | Thu: 12:30 PM Prayer",
+      serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/PGwcSAqnttzAy7Pq7",
       phone: "+27 83 748 3419 | 27 78 924 5772",
       facebookUrl: "https://www.facebook.com/share/156W7zPP4m/?mibextid=wwXIfr"
@@ -34,40 +34,41 @@ export default class LocationSectionComponent extends Component {
     {
       name: "TMC Rustenburg",
       address: "180 Klopper Street, Rusternburg",
-      serviceTimes: "Sun: 9:00 AM | Thu: 12:30 PM Prayer",
-      directions: "https://maps.app.goo.gl/PGwcSAqnttzAy7Pq7",
+      serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
+      directions: "https://maps.app.goo.gl/TdKRoj4B7wAnQTDi9",
       phone: "+27 83 619 3336 | +27 78 653 5078",
       facebookUrl: "https://www.facebook.com/share/156W7zPP4m/?mibextid=wwXIfr"
     },
     {
+      
       name: "TMC Free State",
       address: "58 Portia Street Bedelia, Welkom 9459",
-      serviceTimes: "Sun: 9:30 AM | Thu: 12:30 PM Prayer",
+      serviceTimes: "Sun: 9:30 AM | Mid Week: 6:30 PM",
       directions: "https://maps.app.goo.gl/fSSJnr5jShfBUeFDA",
       phone: "+27 63 759 6627 | +27 74 775 8118",
       facebookUrl: "https://facebook.com/tmc"
     },
     {
       name: "TMC Limpopo",
-      address: "123 Limpopo Road, Limpopo",
-      serviceTimes: "Sun: 9:00 AM | Thu: 7:00 PM Prayer",
-      directions: "https://goo.gl/maps/example2",
+      address: "92 Schoeman street, Polokwane, Rostec College Building ",
+      serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
+      directions: "https://maps.app.goo.gl/1QtSA2PkMwzrUf1v7",
       phone: "+27 2076 543 210",
       facebookUrl: "https://www.facebook.com/share/1AFMK7J4iu/"
     },
       {
         name: "TMC Southrand",
         address: "123 Limpopo Road, Limpopo",
-        serviceTimes: "Sun: 9:00 AM | Thu: 7:00 PM Prayer",
+        serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
         directions: "https://goo.gl/maps/example2",
         phone: "+27 2076 543 210",
         facebookUrl: "#"
       },  
       {
         name: "TMC Eastrand",
-        address: "456 Grace Street, London E1 6AN",
-        serviceTimes: "Sun: 9:00 AM | Thu: 7:00 PM Prayer",
-        directions: "https://goo.gl/maps/example2",
+        address: "10 Top Road, Anderbolt, Boksburg",
+        serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
+        directions: "https://maps.app.goo.gl/1XYgQZFfHeqnYjHj9",
         phone: "+27 7654 3210",
         facebookUrl: "https://facebook.com/tmc-eastchapel"
       },
@@ -75,11 +76,11 @@ export default class LocationSectionComponent extends Component {
 
       {
         name: "TMC Vaal Triangle",
-        address: "123 Limpopo Road, Limpopo",
-        serviceTimes: "Sun: 9:00 AM | Thu: 7:00 PM Prayer",
-        directions: "https://goo.gl/maps/example2",
-        phone: "+27 2076 543 210",
-        facebookUrl: "https://facebook.com/tmc"
+        address: "Academy at Vaal Triangle 20 Voortrekker Street, CBD, Vereeniging, 1939",
+        serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
+        directions: "https://maps.app.goo.gl/HGb8thbvSkvuFEMT8",
+        phone: "+27 76 948 5618 | +27 76 593 6458",
+        facebookUrl: "https://www.facebook.com/share/18k7UitSsL/"
       },
 
     

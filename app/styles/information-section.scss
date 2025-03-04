@@ -93,6 +93,7 @@ $light: #FFFFFF;
   }
   
   // app/styles/components/_information.scss
+  
   .worship-banner {
     position: relative;
     width: 100vw;
@@ -197,12 +198,11 @@ $light: #FFFFFF;
   }
   }
   
-  // Ensure parent container doesn't cause horizontal scroll
+ 
   .information-section {
     overflow-x: hidden;
   }
 
-// Remove all .service-times related styles
   
   .preaching-points {
     .points-grid {
