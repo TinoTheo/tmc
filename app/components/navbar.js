@@ -37,18 +37,21 @@ export default class NavBarComponent extends Component {
     });
     // Add logic to highlight specific location if needed
   }
+  
   constructor() {
     super(...arguments);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.handleScroll = this.handleScroll.bind(this); // bind the scroll handler
-    document.addEventListener('click', this.handleClickOutside);
-    window.addEventListener('scroll', this.handleScroll); // add scroll event listener
+    // Scroll handlers
+    this.handleScroll = this.handleScroll.bind(this);
+    window.addEventListener('scroll', this.handleScroll);
+    this.handleScroll();
+    // Mobile scroll prevention
+    document.addEventListener('scroll', this.handleMobileScroll, true);
   }
 
   willDestroy() {
     super.willDestroy();
-    document.removeEventListener('click', this.handleClickOutside);
-    window.removeEventListener('scroll', this.handleScroll); // remove scroll listener
+    window.removeEventListener('scroll', this.handleScroll);
+    document.removeEventListener('scroll', this.handleMobileScroll, true);
   }
 
   handleClickOutside(event) {
@@ -76,4 +79,7 @@ export default class NavBarComponent extends Component {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  
 }
+

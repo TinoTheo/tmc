@@ -45,12 +45,18 @@ $light: #FFFFFF;
       align-items: center;
       gap: 1.5rem;
       margin-bottom: 2rem;
-    
-      @media (max-width: 768px) {
+      
+ 
+      @media (max-width: 1024px) {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+
+        .title-heading {
+          margin-top: 1rem;
+        }
       }
+
     }
     
     .header-logo {
@@ -88,6 +94,10 @@ $light: #FFFFFF;
         .hero-preheading {
           font-size: 1.2rem;
         }
+      }
+
+      @media (max-width: 1080) {
+        
       }
     }
 
