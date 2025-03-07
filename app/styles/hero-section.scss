@@ -24,12 +24,7 @@ $light: #FFFFFF;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      45deg,
-      rgba($secondary, 0.15) 0%,
-      transparent 50%,
-      rgba($accent, 0.1) 100%
-    );
+    background: linear-gradient(45deg,rgba($secondary, 0.15) 0%,transparent 50%,rgba($accent, 0.1) 100%);
     z-index: 1;
     animation: gradientShift 20s ease infinite;
   }
@@ -55,6 +50,12 @@ $light: #FFFFFF;
         .title-heading {
           margin-top: 1rem;
         }
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+
       }
 
     }
@@ -89,29 +90,28 @@ $light: #FFFFFF;
       }
 
       @media (max-width: 768px) {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         
         .hero-preheading {
           font-size: 1.2rem;
         }
-      }
-
-      @media (max-width: 1080) {
-        
       }
     }
 
     .hero-text {
       font-size: 1.5rem;
       margin-bottom: 2.5rem;
-      max-width: 600px;
+      max-width: 600px auto;
       opacity: 0.9;
       font-family: 'Raleway', sans-serif;
       line-height: 1.6;
       font-weight: 300;
       font-style: italic;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
         font-size: 1.2rem;
       }
     }
@@ -122,7 +122,7 @@ $light: #FFFFFF;
     padding: 1rem;
     
     .hero-heading {
-      font-size: 2.2rem !important;
+      font-size: 1.0 rem !important;
     }
   }
 }
@@ -145,6 +145,7 @@ $light: #FFFFFF;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
 
   &::before {
     content: '';
@@ -196,6 +197,7 @@ $light: #FFFFFF;
     width: 1.8em;
     height: 1.8em;
   }
+
 }
 
 @keyframes fadeInUp {
@@ -221,5 +223,18 @@ $light: #FFFFFF;
   100% {
     transform: scale(1) rotate(0deg);
     opacity: 0.8;
+  }
+}
+
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .title-container {
+    
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
   }
 }

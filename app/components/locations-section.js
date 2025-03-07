@@ -51,7 +51,7 @@ export default class LocationSectionComponent extends Component {
       directions: "https://maps.app.goo.gl/AAfdYb7Zrp1ZaxBC8",
       phone_a: "+27 63 759 6627",
       phone_b: "+27 74 775 8118",
-      facebookUrl: "https://facebook.com/tmc"
+      facebookUrl: "https://www.facebook.com/share/15oLBBNexz/"
     },
     {
       name: "TMC Limpopo",
@@ -77,7 +77,7 @@ export default class LocationSectionComponent extends Component {
         directions: "https://maps.app.goo.gl/uctmm28voBGs6WjAA",
         phone_a: "+27 78 277 1027",
         phone_b: "+27 2071 4567",
-        facebookUrl: "https://facebook.com/tmc-eastchapel"
+        facebookUrl: "https://www.facebook.com/share/1ZNGEQapGt/"
       },
 
 
