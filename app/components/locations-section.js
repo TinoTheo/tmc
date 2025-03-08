@@ -51,7 +51,7 @@ export default class LocationSectionComponent extends Component {
       directions: "https://maps.app.goo.gl/AAfdYb7Zrp1ZaxBC8",
       phone_a: "+27 63 759 6627",
       phone_b: "+27 74 775 8118",
-      facebookUrl: "https://www.facebook.com/share/15oLBBNexz/"
+      facebookUrl: "https://www.facebook.com/share/16GTNEwAKf/"
     },
     {
       name: "TMC Limpopo",
@@ -66,7 +66,7 @@ export default class LocationSectionComponent extends Component {
         name: "TMC Southrand",
         address: "123 Limpopo Road, Limpopo",
         serviceTimes: "Sun: 9:00 AM | Mid Week: 6:30 PM",
-        directions: "https://goo.gl/maps/example2",
+        directions: "https://www.facebook.com/share/15oLBBNexz/",
         phone_a: "+27 2076 543 210",
         facebookUrl: "#"
       },  
