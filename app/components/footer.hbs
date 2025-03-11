@@ -1,25 +1,5 @@
-{{!-- app/templates/components/site-footer.hbs --}}
 <footer class="site-footer" id="footer">
   <div class="footer-content">
-    {{!-- Contact Section --}}
-    <div class="footer-section">
-      <h3 class="footer-heading">Contact TMC</h3>
-      <div class="contact-info">
-        <div class="contact-item">
-          {{svg-jar "map-pin" class="footer-icon"}}
-          <p>Church Location<br>South Africa</p>
-        </div>
-        <div class="contact-item">
-          {{svg-jar "phone" class="footer-icon"}}
-          <p>+27 71 502 5236</p>
-        </div>
-        <div class="contact-item">
-          {{svg-jar "email" class="footer-icon"}}
-          <p>contact@methodist.tmc</p>
-        </div>
-      </div>
-    </div>
-
     {{!-- Quick Links --}}
     <div class="footer-section">
       <h3 class="footer-heading">Quick Links</h3>
@@ -28,34 +8,6 @@
           <a href="{{link.url}}" class="footer-link">{{link.label}}</a>
         {{/each}}
       </nav>
-    </div>
-
-    {{!-- Newsletter --}}
-    <div class="footer-section">
-      <h3 class="footer-heading">Stay Connected</h3>
-<form class="newsletter-form" {{on "submit" this.handleSubscribe}}>
-  <div class="form-group">
-    <input type="email" placeholder="Enter your email" class="newsletter-input"value={{this.email}} disabled={{this.isLoading}} required>
-    <button 
-      type="submit" 
-      class="cta-subscribe"
-      disabled={{this.isLoading}}
-    >
-      {{if this.isLoading 'Submitting...' 'Subscribe'}}
-      {{svg-jar "arrow-right" class="cta-icon"}}
-    </button>
-  </div>
-  
-  {{#if this.subscriptionStatus}}
-    <div class="subscription-status {{this.subscriptionStatus}}" role="alert">
-      {{#if (eq this.subscriptionStatus "success")}}
-        ✓ Thank you for subscribing!
-      {{else}}
-        ⚠️ Subscription failed. Please try again.
-      {{/if}}
-    </div>
-  {{/if}}
-</form>
     </div>
   </div>
 

@@ -7,9 +7,9 @@ $light: #FFFFFF;
 
 .location-section {
     position: relative;
-    padding: 8rem 2rem;
+    padding: 0.5rem 2rem;
     background: $light;
-  
+
     .section-overlay {
       position: absolute;
       top: 0;
@@ -25,11 +25,12 @@ $light: #FFFFFF;
       z-index: 2;
       max-width: 1400px;
       margin: 0 auto;
+      padding-top: 0;
     }
   
     .location-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr ;
       gap: 4rem;
       margin-top: 4rem;
   
@@ -59,6 +60,7 @@ $light: #FFFFFF;
     padding: 2rem 0;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+  
   
     &::-webkit-scrollbar {
       height: 8px;
@@ -95,7 +97,7 @@ $light: #FFFFFF;
     display: flex;
     flex-direction: column;
     min-height: 350px;
-  
+    margin: 10px;
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba($primary, 0.1);
@@ -142,7 +144,6 @@ $light: #FFFFFF;
 .info-item {  
 
   .info-text{
-
     color: $primary;
    font-weight: bold;
   }
@@ -215,7 +216,6 @@ $light: #FFFFFF;
     align-items: center;
     gap: 0.5rem;
     color: $accent;
-    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;

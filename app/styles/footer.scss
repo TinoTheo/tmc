@@ -1,4 +1,3 @@
-// app/styles/components/_footer.scss
 $primary: #000000;
 $accent: #ED1C24;
 $secondary: #003399;
@@ -26,74 +25,52 @@ $light: #FFFFFF;
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
+  text-align: center;
 }
 
 .footer-section {
   .footer-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
+    display: inline-block;
 
     &::after {
       content: '';
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 40px;
       height: 2px;
       background: $accent;
     }
   }
 }
-.icon-base {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: middle;
-  fill: currentColor;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-
-  p {
-    margin: 0;
-    line-height: 1.6;
-    font-family: 'Raleway', sans-serif;
-  }
-}
-
-.footer-icon {
-  @extend .icon-base;
-  width: 1.2rem;
-  height: 1.2rem;
-  flex-shrink: 0;
-  color: $secondary;
-}
 
 .footer-nav {
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 
   .footer-link {
     color: $light;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     transition: color 0.3s ease;
     position: relative;
-    width: fit-content;
+    padding: 0.5rem 0;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: 0;
       left: 0;
       width: 0;
       height: 1px;
@@ -111,99 +88,6 @@ $light: #FFFFFF;
   }
 }
 
-.newsletter-form {
-  max-width: 500px;
-  margin: 0 auto;
-
-  .form-group {
-    position: relative;
-    display: flex;
-    gap: 1rem;
-    
-    @media (max-width: 480px) {
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-  }
-
-  .newsletter-input {
-    flex: 1;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid rgba($light, 0.3);
-    border-radius: 50px;
-    background: transparent;
-    color: $light;
-    font-family: 'Raleway', sans-serif;
-    transition: all 0.3s ease;
-
-    &:focus {
-      outline: none;
-      border-color: $secondary;
-      box-shadow: 0 0 0 3px rgba($secondary, 0.2);
-    }
-
-    &::placeholder {
-      color: rgba($light, 0.7);
-    }
-  }
-
-  .cta-subscribe {
-    background: $accent;
-    color: $light;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 50px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background: darken($accent, 10%);
-      transform: translateY(-1px);
-    }
-
-    &:disabled {
-      background: desaturate($accent, 40%);
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .cta-icon {
-      @extend .icon-base;
-      width: 1rem;
-      height: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .spinner-icon {
-      width: 1.2rem;
-      height: 1.2rem;
-      animation: spin 1s linear infinite;
-    }
-  }
-
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-    
-    .newsletter-input {
-      padding: 0.7rem 1.2rem;
-    }
-    
-    .cta-subscribe {
-      padding: 0.7rem 1.5rem;
-    }
-  }
-}
-
 .footer-bottom {
   border-top: 1px solid rgba($light, 0.1);
   padding: 2rem 0;
@@ -212,8 +96,9 @@ $light: #FFFFFF;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
+
 .icon-base {
   width: 1.5em;
   height: 1.5em;
@@ -221,14 +106,17 @@ $light: #FFFFFF;
   fill: currentColor;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .tmc-logo {
   @extend .icon-base;
-  width: 1.5em;
-  height: 1.5em;
 }
+
 .copyright {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: rgba($light, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .social-links {
@@ -248,16 +136,13 @@ $light: #FFFFFF;
   }
 }
 
-// Responsive Design
 @media (max-width: 768px) {
-  .footer-content {
-    
-    grid-template-columns: 1fr;
-    
-  }
-
-  .footer-bottom {
+  .footer-nav {
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
+  }
+  
+  .footer-content {
+    padding-bottom: 2rem;
   }
 }
