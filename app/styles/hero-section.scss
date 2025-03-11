@@ -11,7 +11,7 @@ $light: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#000000,rgba($light, 0.1)), url('/assets/images/hero-bg (2).jpg') center/cover;
+  background: linear-gradient(#505050,rgba($light, 0.1)), url('/assets/images/hero-bg (2).jpg') center/cover;
               
   color: $light;
   padding: 2rem;
@@ -42,7 +42,7 @@ $light: #FFFFFF;
       margin-bottom: 2rem;
       
       .header-logo {
-        width: 30vw;
+        width: 20vw;
       }
  
       @media (max-width: 1024px) {
